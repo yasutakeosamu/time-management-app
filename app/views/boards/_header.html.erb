@@ -1,0 +1,27 @@
+<div class='header'>
+  <div class='header-top'>
+    <%= link_to 'TimeManagement', root_path, class:'header-logo' %>
+    <div class='user-name-wrapper'>
+      <div class='user-name'>
+        UserName(仮)
+      </div>
+        <%= link_to 'ログアウト', '#', class:'logout' %>
+    </div>
+  </div>
+  <div class='header-bottom'>
+    <div class='board-wrapper'>
+      <div class='board-name'>
+        BoardName(仮)
+      </div>
+      <div class='board-menu'>
+        <%= link_to 'ボードを追加する', '#', class:'add-board' %>
+        <select class='change-board'>
+          <option>ボードを選択する</option>
+          <option>ボード１</option>
+          <option>ボード２</option>
+        </select>
+      </div>
+    </div>
+    <%= link_to 'タスクを追加する', '#', class:'add-task' %>
+  </div>
+</div>

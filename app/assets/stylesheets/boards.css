@@ -1,0 +1,118 @@
+.wrpper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 100px;
+  background-color: lightblue;
+  padding: 0 50px;
+}
+
+.header-top {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  color: lightskyblue;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.header-logo:hover {
+  color: aliceblue;
+}
+
+.user-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  color:aliceblue;
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+.logout {
+  background-color: aliceblue;
+  color: lightblue;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.board-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.board-name {
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.board-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.add-board {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.change-board {
+  background-color: lightblue;
+  color: aliceblue;
+  border: none;
+}
+
+.add-task {
+  background-color: aliceblue;
+  color: lightblue;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.main {
+  height: calc( 100vh - 100px );
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+}
+
+.inportance1, .inportance2, .inportance3, .inportance4 {
+  height: 25%;
+  display: flex;
+}
+
+.urgence1, .urgence2, .urgence3, .urgence4 {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inportance2 {
+  border-bottom: 1px solid aliceblue;
+}
+
+.urgence2 {
+  border-right: 1px solid aliceblue;
+}
+
+.task-card {
+  background-color: aliceblue;
+  margin: 5px;
+  padding: 15px;
+}
