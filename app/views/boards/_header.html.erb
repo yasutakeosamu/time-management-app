@@ -3,9 +3,9 @@
     <%= link_to 'TimeManagement', root_path, class:'header-logo' %>
     <div class='user-name-wrapper'>
       <div class='user-name'>
-        UserName(仮)
+        <%= current_user.name %>
       </div>
-        <%= link_to 'ログアウト', '#', class:'logout' %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: 'DELETE', class:'logout' %>
     </div>
   </div>
   <div class='header-bottom'>
