@@ -1,5 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Board, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#create' do
+    before do
+      @board = FactoryBot.build(:board)
+    end
+    it 'nameがあれば登録できる' do
+      expect(@board).to be_valid
+    end
+    it 'nameが空では登録できない' do
+      @board.name = ''
+      @board.valid?
+      expect(@board.errors.full_messages).to include("Name can't be blank")
+    end
+  end
 end
