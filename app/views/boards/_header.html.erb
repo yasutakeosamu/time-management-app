@@ -9,19 +9,21 @@
     </div>
   </div>
   <div class='header-bottom'>
-    <div class='board-wrapper'>
+    <%= link_to 'タスクを追加する', '#', class:'add-task' %>
       <div class='board-name'>
         BoardName(仮)
       </div>
       <div class='board-menu'>
-        <%= link_to 'ボードを追加する', '#', class:'add-board' %>
+      
+        <%= form_with model:@board, url:boards_path, local:true do |f| %>
+          <%= f.text_field :name, placeholder:'ボードを追加する', class:'add-board' %>
+          <%= f.submit '追加', class:'mini-btn' %>
+        <% end %>
         <select class='change-board'>
           <option>ボードを選択する</option>
           <option>ボード１</option>
           <option>ボード２</option>
         </select>
-      </div>
-    </div>
-    <%= link_to 'タスクを追加する', '#', class:'add-task' %>
+      </div>    
   </div>
 </div>

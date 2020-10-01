@@ -66,14 +66,25 @@
 }
 
 .add-board {
-  text-decoration: none;
-  color: aliceblue;
+  height: 20px;
+}
+
+.mini-btn {
+  color: aliceblue;  
+  background-color: lightblue;
+}
+
+.mini-btn:hover {
+  color: lightblue;
+  background-color: aliceblue;
 }
 
 .change-board {
-  background-color: lightblue;
-  color: aliceblue;
+  background-color: aliceblue;
+  color: gray;
   border: none;
+  margin-top: 3px;
+  height: 20px;
 }
 
 .add-task {
