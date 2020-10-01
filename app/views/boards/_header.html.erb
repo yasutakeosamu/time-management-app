@@ -15,15 +15,21 @@
       </div>
       <div class='board-menu'>
       
-        <%= form_with model:@board, url:boards_path, local:true do |f| %>
+        <%= form_with url:boards_path, local:true do |f| %>
           <%= f.text_field :name, placeholder:'ボードを追加する', class:'add-board' %>
           <%= f.submit '追加', class:'mini-btn' %>
         <% end %>
-        <select class='change-board'>
-          <option>ボードを選択する</option>
-          <option>ボード１</option>
-          <option>ボード２</option>
-        </select>
+          <%= form_with url:'', method:'GET', local:true do |f| %>
+            <select name='board_id' class='change-board'>
+              <option>ボードを選択する</option>
+              <%= @boards.each do |board| %>
+                <% if board.user_id == current_user.id %>
+                  <option value=<%=board.id%>> <%= board.name %> </option>
+                <% end %>
+              <% end %>
+            </select>
+            <%= f.submit '選択', class:'mini-btn' %>
+          <% end %>
       </div>    
   </div>
 </div>
