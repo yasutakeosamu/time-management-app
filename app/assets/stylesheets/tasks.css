@@ -22,14 +22,18 @@ textarea {
   height: 100px;
 }
 
-.select {
+.select, .date_field, .number_field{
   border: none;
   background-color: aliceblue;
   color: gray;
 }
 
-.date_field {
-  border: none;
+.hour-wrapper {
   background-color: aliceblue;
+  margin: 20px;
+  padding: 0 10px;
+}
+
+.hour {
   color: gray;
 }

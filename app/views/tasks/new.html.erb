@@ -20,9 +20,11 @@
           <%= f.date_field :deadline, class:'date_field' %>
         </div>
         <div class='task-form'>
-          <%= f.label :hour, '所要時間' %>
-          <%= f.text_field :hour %>
-        </div>
+          <label class='hour-wrapper'>
+            <%= f.label :hour, '所要時間' %>
+            <%= f.number_field :hour, min:0, max: 12, size:20, class:'number_field' %><span class='hour'>時間</span>
+          </div>
+        </label>
         <div class='task-form'>
           <%= f.hidden_field :user_id, value:current_user.id %>
         </div>
