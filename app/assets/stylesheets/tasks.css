@@ -1,0 +1,35 @@
+.task-wrapper {
+  background-color: lightgray;
+  height: calc( 100vh - 100px );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  padding: 30px;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+textarea {
+  border: none;
+  background-color: aliceblue;
+  height: 100px;
+}
+
+.select {
+  border: none;
+  background-color: aliceblue;
+  color: gray;
+}
+
+.date_field {
+  border: none;
+  background-color: aliceblue;
+  color: gray;
+}
