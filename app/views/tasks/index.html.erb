@@ -1,2 +1,123 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<div class='header'>
+  <div class='header-top'>
+    <%= link_to 'TimeManagement', root_path, class:'header-logo' %>
+    <div class='user-name-wrapper'>
+      <div class='user-name'>
+        <%= current_user.name %>
+      </div>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: 'DELETE', class:'logout' %>
+    </div>
+  </div>
+  <div class='header-bottom'>
+    <%= link_to 'タスクを追加する', '#', class:'add-task' %>
+      <div class='board-name'>
+        <%= @board.name %>
+      </div>
+      <div class='board-menu'>
+      
+        <%= form_with url:boards_path, local:true do |f| %>
+          <%= f.text_field :name, placeholder:'ボードを追加する', class:'add-board' %>
+          <%= f.submit '追加', class:'mini-btn' %>
+        <% end %>
+          <%= form_with url:tasks_path, method:'GET', local:true do |f| %>
+            <select name='board_id' class='change-board'>
+              <%= @boards.each do |board| %>
+                <% if board.user_id == current_user.id %>
+                  <option value=<%=board.id%>> <%= board.name %> </option>
+                <% end %>
+              <% end %>
+            </select>
+            <%= f.submit 'ボードを切り替える', class:'mini-btn' %>
+          <% end %>
+      </div>    
+  </div>
+</div>
+<div class='main'>
+  <div class='inportance1'>
+    <div class='urgence1'>
+        <div class='task-card'>Task1</div>
+        <div class='task-card'>Task2hogehogehoge</div>
+    </div>
+    <div class='urgence2'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence3'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence4'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+  </div>
+  <div class='inportance2'>
+    <div class='urgence1'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence2'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence3'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence4'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+  </div>
+  <div class='inportance3'>
+    <div class='urgence1'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence2'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence3'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence4'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+  </div>
+  <div class='inportance4'>
+    <div class='urgence1'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence2'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence3'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+    <div class='urgence4'>
+      <div class='task-card'>
+        Task
+      </div>
+    </div>
+  </div>
+</div>
