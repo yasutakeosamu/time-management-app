@@ -37,3 +37,13 @@ textarea {
 .hour {
   color: gray;
 }
+
+.error-btn {
+  text-decoration: none;
+  color: gray;
+  margin-top: 20px;
+}
+
+.error-btn:hover {
+  color: aliceblue;
+}

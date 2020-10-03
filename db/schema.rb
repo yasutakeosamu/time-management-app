@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_01_095237) do
     t.string "hour", null: false
     t.bigint "user_id"
     t.bigint "board_id"
-    t.boolean "check", null: false
+    t.boolean "check"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["board_id"], name: "index_tasks_on_board_id"

@@ -8,7 +8,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :hour, null:false
       t.references :user, foreign_key:true
       t.references :board, foreign_key:true
-      t.boolean :check, null:false
+      t.boolean :check
       t.timestamps
     end
   end
