@@ -1,0 +1,43 @@
+<div class='wrapper'>
+  <%= render 'header' %>
+  <div class='main'>
+    <div class='task-wrapper'>
+      <%= form_with model:@task, url:tasks_path, local:true do |f| %>
+        <div class='task-form'>
+          <%= f.label :title, 'タイトル' %>
+          <%= f.text_field :title %>
+        </div>
+        <div class='task-form'>
+          <%= f.label :text, '説明' %>
+          <%= f.text_area :text  %>
+        </div>
+        <div class='task-form'>
+          <%= f.label :inportance, '重要度' %>
+          <%= f.select :inportance, [['とても重要', 1], ['どちらかというと重要', 2], ['あまり重要ではない', 3], ['重要ではない', 4]], {include_blank:true}, {class:'select'} %>
+        </div>
+        <div class='task-form'>
+          <%= f.label :deadline, '完了期限' %>
+          <%= f.date_field :deadline, class:'date_field' %>
+        </div>
+        <div class='task-form'>
+          <label class='hour-wrapper'>
+            <%= f.label :hour, '所要時間' %>
+            <%= f.number_field :hour, min:0, max: 12, size:20, class:'number_field' %><span class='hour'>時間</span>
+          </div>
+        </label>
+        <div class='task-form'>
+          <%= f.hidden_field :user_id, value:current_user.id %>
+        </div>
+        <div class='task-form'>
+          <%= f.hidden_field :board_id, value:@board.id %>
+        </div>
+        <div class='task-form'>
+          <%= f.hidden_field :check, value:false %>
+        </div>
+        <div class='task-form'>
+          <%= f.submit '登録', class:'btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

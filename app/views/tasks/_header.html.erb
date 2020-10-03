@@ -9,7 +9,9 @@
     </div>
   </div>
   <div class='header-bottom'>
+    <%= link_to 'タスクを追加する', {:controller => 'tasks', :action => 'new', board_id:@board.id}, class:'add-task' %>
       <div class='board-name'>
+        <%= @board.name %>
       </div>
       <div class='board-menu'>
       

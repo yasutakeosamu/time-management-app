@@ -80,11 +80,16 @@
 }
 
 .change-board {
-  background-color: aliceblue;
-  color: gray;
+  background-color: lightblue;
+  color: aliceblue;
   border: none;
   margin-top: 3px;
   height: 20px;
+}
+
+.change-board:hover {
+  background-color: aliceblue;
+  color: lightblue;
 }
 
 .add-task {
