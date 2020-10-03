@@ -1,18 +1,14 @@
 class TasksController < ApplicationController
+  before_action :get_boards
+
   def index
-    @boards = Board.all
-    @board = Board.find(params[:board_id])
   end
 
   def new
-    @boards = Board.all
-    @board = Board.find(params[:board_id])
   end
 
   def create
     @task = Task.new(task_params)
-    @boards = Board.all
-    @board = Board.find(params[:board_id])
     if @task.save
       render :index
     end
@@ -22,5 +18,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.permit(:title, :text, :inportance, :deadline, :hour, :user_id, :board_id, :check)
+  end
+
+  def get_boards
+    @boards = Board.where(user_id:current_user.id)
+    @board = Board.find(params[:board_id])
   end
 end

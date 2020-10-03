@@ -21,10 +21,9 @@
         <% end %>
           <%= form_with url:tasks_path, method:'GET', local:true do |f| %>
             <select name='board_id' class='change-board'>
-              <%= @boards.each do |board| %>
-                <% if board.user_id == current_user.id %>
+              <option value= <%=@board.id%> > <%= @board.name %> </option>
+              <%= @boards.where.not(id:@board.id).each do |board| %>
                   <option value=<%=board.id%>> <%= board.name %> </option>
-                <% end %>
               <% end %>
             </select>
             <%= f.submit 'ボードを切り替える', class:'mini-btn' %>
