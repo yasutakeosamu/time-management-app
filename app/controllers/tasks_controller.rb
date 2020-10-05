@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :get_boards
 
   def index
+    @task = Task.where(board_id:@board.id)
   end
 
   def new
@@ -9,9 +10,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    if @task.save
-      render :index
-    end
+    @task.save
   end
 
   private
