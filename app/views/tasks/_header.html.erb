@@ -9,7 +9,10 @@
     </div>
   </div>
   <div class='header-bottom'>
-    <%= link_to 'タスクを追加する', {:controller => 'tasks', :action => 'new', board_id:@board.id}, class:'add-task' %>
+    <div>
+      <%= link_to 'タスクを追加する', {:controller => 'tasks', :action => 'new', board_id:@board.id}, class:'add-task' %>
+      <%= link_to 'ボードを削除する', board_path(@board.id), method:'DELETE',data:{confirm:"#{@board.name}を削除します"}, class:'add-task' %>
+    </div>
       <div class='board-name'>
         <%= @board.name %>
       </div>

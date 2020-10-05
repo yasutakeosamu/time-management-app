@@ -8,4 +8,9 @@ class BoardsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    Board.destroy(params[:id])
+    redirect_to root_path
+  end
+
 end
