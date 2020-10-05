@@ -9,8 +9,10 @@
           </p>
         <% end %>
         <%= link_to 'もう一度やり直す', {:controller => 'tasks', :action => 'new', board_id:@board.id}, class:'error-btn' %>
-        <%= link_to "#{@board.name}に戻る", {:controller => 'tasks', :action => 'index', board_id:@board.id}, class:'error-btn' %>
+      <% else %>
+        タスクを追加しました
       <% end %>
+      <%= link_to "#{@board.name}に戻る", {:controller => 'tasks', :action => 'index', board_id:@board.id}, class:'error-btn' %>
     </div>
   </div>
 </div>
