@@ -4,7 +4,7 @@
     <div class='urgence1'>
       <% @task.each do |task| %>
         <% if task.inportance == 1 && task.deadline == Date.today %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -13,7 +13,7 @@
     <div class='urgence2'>
       <% @task.each do |task| %>
         <% if task.inportance == 1 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -22,7 +22,7 @@
     <div class='urgence3'>
       <% @task.each do |task| %>
         <% if task.inportance == 1 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -31,7 +31,7 @@
     <div class='urgence4'>
       <% @task.each do |task| %>
         <% if task.inportance == 1 && task.deadline > Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -42,7 +42,7 @@
     <div class='urgence1'>
       <% @task.each do |task| %>
         <% if task.inportance == 2 && task.deadline == Date.today %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -51,7 +51,7 @@
     <div class='urgence2'>
       <% @task.each do |task| %>
         <% if task.inportance == 2 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -60,7 +60,7 @@
     <div class='urgence3'>
       <% @task.each do |task| %>
         <% if task.inportance == 2 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -69,7 +69,7 @@
     <div class='urgence4'>
       <% @task.each do |task| %>
         <% if task.inportance == 2 && task.deadline > Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -80,7 +80,7 @@
     <div class='urgence1'>
       <% @task.each do |task| %>
         <% if task.inportance == 3 && task.deadline == Date.today %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -89,7 +89,7 @@
     <div class='urgence2'>
       <% @task.each do |task| %>
         <% if task.inportance == 3 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -98,7 +98,7 @@
     <div class='urgence3'>
       <% @task.each do |task| %>
         <% if task.inportance == 3 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -107,7 +107,7 @@
     <div class='urgence4'>
       <% @task.each do |task| %>
         <% if task.inportance == 3 && task.deadline > Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -118,7 +118,7 @@
     <div class='urgence1'>
       <% @task.each do |task| %>
         <% if task.inportance == 4 && task.deadline == Date.today %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -127,7 +127,7 @@
     <div class='urgence2'>
       <% @task.each do |task| %>
         <% if task.inportance == 4 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -136,7 +136,7 @@
     <div class='urgence3'>
       <% @task.each do |task| %>
         <% if task.inportance == 4 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>
@@ -145,7 +145,7 @@
     <div class='urgence4'>
       <% @task.each do |task| %>
         <% if task.inportance == 4 && task.deadline > Date.today + 14 %>
-          <div class='task-card'>
+          <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
             <%= task.title %> 
           </div>
         <% end %>

@@ -47,3 +47,7 @@ textarea {
 .error-btn:hover {
   color: aliceblue;
 }
+
+div[data-check="true"] {
+  color: lightgray;
+}
