@@ -13,6 +13,17 @@ class TasksController < ApplicationController
     @task.save
   end
 
+  def check
+    task = Task.find(params[:id])
+    if task.check
+      task.update(check: false)
+    else
+      task.update(check: true)
+    end
+    item = Task.find(params[:id])
+    render json:{ task: item }
+  end
+
   private
 
   def task_params
