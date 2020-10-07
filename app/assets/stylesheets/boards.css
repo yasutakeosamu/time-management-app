@@ -132,4 +132,10 @@
   background-color: aliceblue;
   margin: 5px;
   padding: 15px;
+  cursor: pointer;
+  transition: all 1s ease 0s;
+}
+
+.task-card:hover {
+  transform: scale(1.1, 1.1);
 }
