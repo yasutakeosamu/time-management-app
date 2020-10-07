@@ -20,6 +20,7 @@
   color: lightskyblue;
   font-size: 30px;
   text-decoration: none;
+  transition: all 3s ease 0s;
 }
 
 .header-logo:hover {
@@ -35,6 +36,7 @@
   color:aliceblue;
   font-size: 20px;
   padding-right: 30px;
+  cursor: default;
 }
 
 .logout {
@@ -58,6 +60,7 @@
 .board-name {
   font-size: 30px;
   color: aliceblue;
+  cursor: default;
 }
 
 .board-menu {
@@ -73,6 +76,8 @@
 .mini-btn {
   color: aliceblue;  
   background-color: lightblue;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
 }
 
 .mini-btn:hover {
@@ -86,6 +91,8 @@
   border: none;
   margin-top: 3px;
   height: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
 }
 
 .change-board:hover {
@@ -102,13 +109,16 @@
 
 .main {
   height: calc( 100vh - 100px );
+  width: calc( 100% - 6px );
   background-color: lightgray;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .inportance1, .inportance2, .inportance3, .inportance4 {
   height: 25%;
+  width: 100%;
   display: flex;
 }
 
@@ -126,6 +136,18 @@
 
 .urgence2 {
   border-right: 1px solid aliceblue;
+}
+
+.urgency-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.urgency {
+  color: gray;
+  cursor: default;
 }
 
 .task-card {
