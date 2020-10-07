@@ -49,5 +49,6 @@ textarea {
 }
 
 div[data-check="true"] {
-  color: lightgray;
+  background-color: lightgray;
+  color: gray;
 }
