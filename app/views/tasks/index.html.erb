@@ -11,6 +11,22 @@
           <% if task.inportance == 1 && task.deadline == Date.today %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -20,6 +36,22 @@
           <% if task.inportance == 1 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -29,6 +61,22 @@
           <% if task.inportance == 1 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -38,6 +86,22 @@
           <% if task.inportance == 1 && task.deadline > Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -49,6 +113,22 @@
           <% if task.inportance == 2 && task.deadline == Date.today %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -58,6 +138,22 @@
           <% if task.inportance == 2 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -67,6 +163,22 @@
           <% if task.inportance == 2 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -76,6 +188,22 @@
           <% if task.inportance == 2 && task.deadline > Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -87,6 +215,22 @@
           <% if task.inportance == 3 && task.deadline == Date.today %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -96,6 +240,22 @@
           <% if task.inportance == 3 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -105,6 +265,22 @@
           <% if task.inportance == 3 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -114,6 +290,22 @@
           <% if task.inportance == 3 && task.deadline > Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -125,6 +317,22 @@
           <% if task.inportance == 4 && task.deadline == Date.today %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -134,6 +342,22 @@
           <% if task.inportance == 4 && task.deadline > Date.today && task.deadline <= Date.today + 7 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -143,6 +367,22 @@
           <% if task.inportance == 4 && task.deadline > Date.today + 7 && task.deadline <= Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -152,6 +392,22 @@
           <% if task.inportance == 4 && task.deadline > Date.today + 14 %>
             <div class='task-card', data-id=<%= task.id %> data-check=<%= task.check %> board-id=<%= @board.id %>>
               <%= task.title %> 
+              <div class='task-info'>
+                <p class='task-info-text'><%= task.text %></p>
+                <P>　重要度：
+                  <% if task.inportance == 1 %>
+                    とても重要
+                  <% elsif task.inportance == 2 %>
+                    どちらかというと重要
+                  <% elsif task.inportance == 3 %>
+                    あまり重要でない
+                  <% else %>
+                    重要でない
+                  <% end %>
+                </p>
+                <p>完了期限：<%= task.deadline %></p>
+                <p>所要時間：<%= task.hour %>時間</p>
+              </div>
             </div>
           <% end %>
         <% end %>
