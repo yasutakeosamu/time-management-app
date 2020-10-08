@@ -50,7 +50,7 @@ Ruby / Ruby on Rails / JavaScript / MySQL / GitHub / Heroku / Visual Studio Code
 | name | string | null:false |
 | email | string | null:false |
 | password | string | null:false |
-Association
+#### Association
 - has_many :boards
 - has_many :tasks
 
@@ -59,7 +59,7 @@ Association
 |--------|------|--------|
 | name | string | null:false |
 | user | references | foreign_key:true |
-Association
+#### Association
 - belongs_to :user
 - has_many :tasks, dependent: :destroy
 
@@ -74,6 +74,6 @@ Association
 | check | boolean | |
 | user | references | foreign_key:true |
 | board | references | foreign_key:true |
-Association
+#### Association
 - belongs_to :user
 - belongs_to :board
