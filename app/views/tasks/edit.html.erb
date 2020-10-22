@@ -39,7 +39,7 @@
         </div>
       <% end %>
       <div class='task-form'>
-        <%= link_to 'タスクを削除する', {:controller => 'tasks', :action => 'destroy', :id => @task.id, :board_id => @board.id}, method:'DELETE', class:'destroy-btn' %>
+        <%= link_to 'タスクを削除する', {:controller => 'tasks', :action => 'destroy', :id => @task.id, :board_id => @board.id}, method:'DELETE' ,data:{confirm:"#{@task.title}を削除します"}, class:'destroy-btn' %>
       </div>
     </div>
   </div>
