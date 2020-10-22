@@ -68,3 +68,17 @@ div[data-check="true"] {
   white-space: pre-wrap;
   margin-left: 10px;
 }
+
+.edit-link {
+  padding: 2px 5px;
+  margin: 5px;
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.edit-link:hover {
+  background-color: lightgray;
+}
