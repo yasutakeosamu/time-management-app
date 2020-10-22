@@ -16,6 +16,18 @@
   margin: 10px;
 }
 
+.destroy-btn {
+  color: gray;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
+}
+
+.destroy-btn:hover {
+  transform: scale(1.1, 1.1);
+  color: aliceblue;
+}
+
 textarea {
   border: none;
   background-color: aliceblue;
