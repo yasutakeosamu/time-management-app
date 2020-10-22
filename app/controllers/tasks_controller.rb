@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :get_boards
+  before_action :get_boards, except: :update
 
   def index
     @task = Task.where(board_id:@board.id)
@@ -18,8 +18,10 @@ class TasksController < ApplicationController
   end
 
   def update
+    @boards = Board.where(user_id:current_user.id)
+    @board = Board.find(params[:task][:board_id])
     @task = Task.find(params[:id])
-    @task.update(task_params)
+    @task.update(task_update_params)
   end
 
   def check
@@ -37,6 +39,10 @@ class TasksController < ApplicationController
 
   def task_params
     params.permit(:title, :text, :inportance, :deadline, :hour, :user_id, :board_id, :check)
+  end
+
+  def task_update_params
+    params.require(:task).permit(:title, :text, :inportance, :deadline, :hour, :user_id, :board_id, :check)
   end
 
   def get_boards
